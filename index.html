@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JiMo Shorts Uploader — 自有短视频分发工具</title>
+<style>
+  body { font-family: -apple-system, "Helvetica Neue", Arial, "PingFang SC", sans-serif; max-width: 820px; margin: 0 auto; padding: 40px 24px; color: #1c1c1e; line-height: 1.7; }
+  h1 { font-size: 26px; margin-bottom: 4px; }
+  h2 { font-size: 19px; margin-top: 32px; border-left: 4px solid #0071e3; padding-left: 10px; }
+  .sub { color: #6b6b70; font-size: 14px; }
+  .card { background: #f5f5f7; border-radius: 12px; padding: 18px 20px; margin: 16px 0; }
+  a { color: #0071e3; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  ul { padding-left: 20px; }
+  .foot { margin-top: 40px; font-size: 13px; color: #8a8a8e; border-top: 1px solid #e3e3e6; padding-top: 16px; }
+  .tag { display:inline-block; background:#e8f1ff; color:#0071e3; border-radius:6px; padding:2px 8px; font-size:12px; margin-right:6px; }
+</style>
+</head>
+<body>
+<h1>JiMo Shorts Uploader</h1>
+<p class="sub">个人创作者的自有短视频自动分发工具 · 仅用于把自己的视频发布到自己的账号</p>
+
+<div class="card">
+  <p><span class="tag">本地运行</span><span class="tag">自用</span><span class="tag">逐条人工确认</span></p>
+  <p>这是一个运行在创作者本人电脑上的工具，用于把<strong>自己制作</strong>的原创短视频，通过各平台<strong>官方 API</strong>，分发到自己<strong>自己的</strong> Facebook、Instagram、TikTok、Pinterest 账号。每一条发布前都需创作者本人确认，不批量搬运、不代发第三方内容。</p>
+</div>
+
+<h2>它做什么 / What it does</h2>
+<ul>
+  <li>读取本地已制作好的短视频（竖版 1080×1920），经本地预处理（下变换、生成封面、封装优化）后，通过平台官方 API 发布。</li>
+  <li>Facebook 支持服务端原生定时；其余平台由本地调度器在设定时间窗内错峰发布。</li>
+  <li>全程本地处理，不把视频上传到任何第三方云，也不采集任何观众数据。</li>
+  <li>每条发布前由创作者人工确认；本地记录发布日志（去重、重试、异常熔断）。</li>
+</ul>
+
+<h2>隐私与条款 / Privacy & Terms</h2>
+<ul>
+  <li><a href="privacy_policy.html">隐私政策 Privacy Policy</a> — 我们收集什么、不收集什么、数据如何存储与删除。</li>
+  <li><a href="terms_of_service.html">服务条款 Terms of Service</a> — 服务用途、责任归属、不接受第三方内容。</li>
+</ul>
+
+<h2>技术说明 / Technical notes</h2>
+<ul>
+  <li>仅使用各平台官方开发者 API，授权范围最小化（只申请发布所必需的 scope）。</li>
+  <li>OAuth 令牌仅保存在创作者本机（macOS Keychain），不上传、不共享。</li>
+  <li>所有发布行为可逆、可控：令牌可随时撤销，创作者可随时停止工具。</li>
+</ul>
+
+<div class="foot">
+  联系邮箱 / Contact：<strong>{{你的联系邮箱，例如 you@example.com}}</strong>（上线前请替换为可收信的真实邮箱）<br>
+  本页面为公开 HTTPS 静态页，用于平台审核与用户说明。© JiMo Explore（个人品牌频道）。
+</div>
+</body>
+</html>

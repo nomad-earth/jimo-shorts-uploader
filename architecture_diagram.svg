@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 360" font-family="-apple-system, 'Helvetica Neue', Arial, 'PingFang SC', sans-serif">
+  <style>
+    .box { fill:#ffffff; stroke:#0071e3; stroke-width:2; }
+    .box2 { fill:#eaf3ff; stroke:#0071e3; stroke-width:2; }
+    .t { fill:#1c1c1e; font-size:14px; font-weight:600; }
+    .s { fill:#6b6b70; font-size:11px; }
+    .arrow { stroke:#3a3a3c; stroke-width:2; fill:none; }
+    .edge { fill:#2a9d5c; font-size:12px; font-weight:600; }
+    .note { fill:#fff4e5; stroke:#ffd8a8; stroke-width:1.5; }
+    .nt { fill:#8a5a00; font-size:11px; }
+  </style>
+
+  <text x="340" y="26" text-anchor="middle" class="t" font-size="16">数据流架构 · 只发你自己的内容 · 本地处理不上云</text>
+
+  <!-- Box 1 -->
+  <rect class="box" x="20" y="60" width="130" height="70" rx="10"/>
+  <text x="85" y="90" text-anchor="middle" class="t">本地视频母版</text>
+  <text x="85" y="110" text-anchor="middle" class="s">2160×3840 竖版</text>
+
+  <!-- Box 2 -->
+  <rect class="box2" x="195" y="60" width="150" height="70" rx="10"/>
+  <text x="270" y="85" text-anchor="middle" class="t">本地预处理</text>
+  <text x="270" y="104" text-anchor="middle" class="s">下变换1080×1920</text>
+  <text x="270" y="120" text-anchor="middle" class="s">封面 + faststart</text>
+
+  <!-- Box 3 -->
+  <rect class="box" x="390" y="60" width="160" height="70" rx="10"/>
+  <text x="470" y="85" text-anchor="middle" class="t">官方 API 发布</text>
+  <text x="470" y="104" text-anchor="middle" class="s">FB / IG / TikTok</text>
+  <text x="470" y="120" text-anchor="middle" class="s">/ Pinterest · 你自己的账号</text>
+
+  <!-- Box 4 -->
+  <rect class="box2" x="585" y="60" width="80" height="70" rx="10"/>
+  <text x="625" y="90" text-anchor="middle" class="t">本地日志</text>
+  <text x="625" y="110" text-anchor="middle" class="s">去重/重试</text>
+
+  <!-- Arrows -->
+  <path class="arrow" d="M150 95 L193 95"/>
+  <path class="arrow" d="M345 95 L388 95"/>
+  <path class="arrow" d="M550 95 L583 95"/>
+  <!-- corner bend to log -->
+  <path class="arrow" d="M625 130 L625 175 L470 175 L470 200" />
+
+  <text x="172" y="83" text-anchor="middle" class="edge">→</text>
+  <text x="367" y="83" text-anchor="middle" class="edge">→</text>
+  <text x="567" y="83" text-anchor="middle" class="edge">→</text>
+
+  <!-- Notes -->
+  <rect class="note" x="20" y="200" width="210" height="54" rx="8"/>
+  <text x="32" y="222" class="nt">★ 本地处理 · 不上云</text>
+  <text x="32" y="240" class="nt">不采集任何观众数据</text>
+
+  <rect class="note" x="250" y="200" width="200" height="54" rx="8"/>
+  <text x="262" y="222" class="nt">★ 每条人工确认后发布</text>
+  <text x="262" y="240" class="nt">非全自动无人发布</text>
+
+  <rect class="note" x="470" y="200" width="200" height="54" rx="8"/>
+  <text x="482" y="222" class="nt">★ FB 原生定时</text>
+  <text x="482" y="240" class="nt">其余本地伪定时错峰 3–8 分</text>
+
+  <text x="340" y="300" text-anchor="middle" class="s">授权令牌仅存本机钥匙串（macOS Keychain）；随时可撤销、可停。</text>
+  <text x="340" y="322" text-anchor="middle" class="s">整个过程可逆、可控、可查 —— 这正是平台审核方关心的“你在干什么”。</text>
+</svg>
